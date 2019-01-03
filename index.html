@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="panels">
+    <div class="panel panel1">
+      <p>Hey</p>
+      <p>Lets</p>
+      <p>Dance</p>
+    </div>
+    <div class="panel panel2">
+      <p>Give</p>
+      <p>Take It</p>
+      <p>Receive</p>
+    </div>
+    <div class="panel panel3">
+      <p>Experience</p>
+      <p>It</p>
+      <p>Today</p>
+    </div>
+    <div class="panel panel4">
+      <p>Give</p>
+      <p>All</p>
+      <p>You Can</p>
+    </div>
+  </div>
+  <script>
+    function toggleOpen() {
+      if (this.classList.contains('open')) {
+          this.classList.remove('open', 'open-active')
+      } else {
+          const usun = document.querySelectorAll('.open');
+          usun.forEach( item => item.classList.remove('open', 'open-active'))
+          this.classList.add('open');
+          this.classList.add('open-active');
+      }
+    }
+    const panel = document.querySelectorAll('.panel');
+    panel.forEach(item => item.addEventListener('click', toggleOpen));
+  </script>
+</body>
+</html>
